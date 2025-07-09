@@ -1,0 +1,446 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    background-color: #777474;
+}
+
+.container {
+    background: #dbd8d8;
+    width: 450px;
+    padding: 1.5rem;
+    margin: 120px auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(255, 255, 255, 0.9);
+}
+
+form {
+    margin: 0 2rem;
+}
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.3rem;
+    margin-bottom: 0.4rem;
+}
+
+input {
+    color: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #757575;
+    padding-left: 1.5rem;
+    font-size: 20px;
+}
+
+.input-group {
+    padding: 3% 0;
+    position: relative;
+
+}
+
+.input-group i {
+    position: absolute;
+    color: black;
+}
+
+input:focus {
+    background-color: transparent;
+    outline: transparent;
+    border-bottom: 2px solid hsl(327, 90%, 28%);
+}
+
+input::placeholder {
+    color: transparent;
+}
+
+label {
+    color: #757575;
+    position: relative;
+    left: 1.2em;
+    top: -1.3em;
+    cursor: auto;
+    transition: 0.3s ease all;
+}
+
+input:focus~label,
+input:not(:placeholder-shown)~label {
+    top: -3em;
+    color: hsl(327, 90%, 28%);
+    font-size: 15px;
+}
+
+.recover {
+    text-align: right;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.recover a {
+    text-decoration: none;
+    color: rgb(79, 79, 88);
+}
+
+.recover a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+button {
+    font-size: 1.1rem;
+    padding: 8px 0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 100%;
+    background: rgb(62, 62, 63);
+    color: white;
+    cursor: pointer;
+    transition: 0.9s;
+}
+
+button:hover {
+    background: #868686;
+}
+
+.or {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.icons {
+    text-align: center;
+}
+
+.icons i {
+    color: rgb(62, 62, 63);
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 2px solid #dfe9f5;
+    margin: 0 15px;
+    transition: 1s;
+}
+
+.icons i:hover {
+    background: #868686;
+    font-size: 1.6rem;
+    border: 2px solid  #868686;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 5rem;
+    margin-top: 0.9rem;
+    font-weight: bold;
+}
+
+#signUpButton,
+#signInButton {
+    color:  rgb(79, 79, 88);
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#signUpButton:hover,
+#signInButton:hover {
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+}
+
+.messageDiv {
+    background-color: hsl(327, 90%, 28%);
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeOut 7s forwards;
+
+} */
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    background-color: #777474;
+    /* Ensure body takes full viewport height for better centering */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Add some padding for smaller screens */
+}
+
+.container {
+    background: #dbd8d8;
+    width: 100%; /* Make width fluid */
+    max-width: 450px; /* Set a max-width for larger screens */
+    padding: 1.5rem;
+    margin: auto; /* Center the container */
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(255, 255, 255, 0.9);
+}
+
+form {
+    margin: 0 1rem; /* Reduce margin for smaller screens */
+}
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.3rem;
+    margin-bottom: 0.4rem;
+}
+
+input {
+    color: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #757575;
+    padding-left: 1.5rem;
+    font-size: 18px; /* Slightly smaller font for better fit on small screens */
+}
+
+.input-group {
+    padding: 3% 0;
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    color: black;
+    font-size: 1.1rem; /* Adjust icon size */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    left: 0; /* Align to the left */
+}
+
+input:focus {
+    background-color: transparent;
+    outline: transparent;
+    border-bottom: 2px solid hsl(327, 90%, 28%);
+}
+
+input::placeholder {
+    color: transparent;
+}
+
+label {
+    color: #757575;
+    position: absolute; /* Change to absolute for better positioning */
+    left: 1.5rem; /* Align with input text */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    cursor: auto;
+    transition: 0.3s ease all;
+    pointer-events: none; /* Allow clicks to pass through to input */
+}
+
+input:focus~label,
+input:not(:placeholder-shown)~label {
+    top: -1.5em; /* Move label up when focused or filled */
+    left: 0; /* Move label to the left */
+    color: hsl(327, 90%, 28%);
+    font-size: 13px; /* Smaller font size for floating label */
+}
+
+.recover {
+    text-align: right;
+    font-size: 0.9rem; /* Slightly smaller font */
+    margin-bottom: 1rem;
+}
+
+.recover a {
+    text-decoration: none;
+    color: rgb(79, 79, 88);
+}
+
+.recover a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+button {
+    font-size: 1rem; /* Adjust font size */
+    padding: 10px 0; /* Increase padding for better touch target */
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 100%;
+    background: rgb(62, 62, 63);
+    color: white;
+    cursor: pointer;
+    transition: 0.9s;
+    margin-top: 15px; /* Add some top margin */
+}
+
+button:hover {
+    background: #868686;
+}
+
+.or {
+    font-size: 1rem; /* Adjust font size */
+    margin-top: 1rem; /* Increase margin */
+    text-align: center;
+}
+
+.icons {
+    text-align: center;
+    margin-top: 1rem; /* Add margin */
+}
+
+.icons i {
+    color: rgb(62, 62, 63);
+    padding: 0.7rem 1.2rem; /* Adjust padding */
+    border-radius: 10px;
+    font-size: 1.3rem; /* Adjust font size */
+    cursor: pointer;
+    border: 2px solid #dfe9f5;
+    margin: 0 10px; /* Adjust margin */
+    transition: 1s;
+}
+
+.icons i:hover {
+    background: #868686;
+    font-size: 1.4rem; /* Adjust font size on hover */
+    border: 2px solid #868686;
+}
+
+.links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically on small screens */
+    align-items: center; /* Center items */
+    padding: 0; /* Remove horizontal padding */
+    margin-top: 0.5rem; /* Adjust margin */
+    font-weight: bold;
+}
+
+.links p {
+    margin-bottom: 10px; /* Space between text and button */
+}
+
+#signUpButton,
+#signInButton {
+    color: rgb(79, 79, 88);
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    width: auto; /* Allow button to size naturally */
+    padding: 5px 10px; /* Add some padding */
+    margin-top: 0; /* Remove top margin */
+}
+
+#signUpButton:hover,
+#signInButton:hover {
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+}
+
+.messageDiv {
+    background-color: hsl(327, 90%, 28%);
+    color: white;
+    padding: 10px 15px; /* Adjust padding */
+    margin: 10px 0; /* Adjust margin */
+    border-radius: 5px;
+    font-size: 0.9rem; /* Adjust font size */
+    opacity: 0;
+    animation: fadeOut 7s forwards;
+    text-align: center; /* Center message text */
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+    form {
+        margin: 0 2rem; /* Restore original margin for larger screens */
+    }
+
+    input {
+        font-size: 25px; /* Restore original font size */
+    }
+
+    label {
+        left: 1.5em; /* Restore original label position */
+        top: 1.3em; /* Restore original label position */
+    }
+
+    input:focus~label,
+    input:not(:placeholder-shown)~label {
+        top: 0.1em; /* Restore original floating label position */
+        left: 1.2em; /* Restore original floating label position */
+        font-size: 15px; /* Restore original font size */
+    }
+
+    .recover {
+        font-size: 1rem; /* Restore original font size */
+    }
+
+    button {
+        font-size: 1.1rem; /* Restore original font size */
+        padding: 8px 0; /* Restore original padding */
+    }
+
+    .or {
+        font-size: 1.1rem; /* Restore original font size */
+    }
+
+    .icons i {
+        padding: 0.8rem 1.5rem; /* Restore original padding */
+        font-size: 1.5rem; /* Restore original font size */
+        margin: 0 15px; /* Restore original margin */
+    }
+
+    .icons i:hover {
+        font-size: 1.6rem; /* Restore original font size on hover */
+    }
+
+    .links {
+        flex-direction: row; /* Display links horizontally on larger screens */
+        justify-content: space-around; /* Restore original spacing */
+        padding: 0 5rem; /* Restore original padding */
+    }
+
+    .links p {
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+
+    #signUpButton,
+    #signInButton {
+        font-size: 1rem; /* Restore original font size */
+        padding: 0; /* Remove padding */
+    }
+
+    .messageDiv {
+        padding: 10px 20px; /* Restore original padding */
+        margin: 10px; /* Restore original margin */
+        font-size: 1rem; /* Restore original font size */
+    }
+}
+
+
