@@ -1,6 +1,5 @@
 # 🔐 Firebase Authentication System  
 
-![Project Preview](https://placehold.co/1200x630.png?text=Firebase+Authentication+System)  
 
 A **responsive** and **secure** login/signup system built with **Firebase Authentication** and **Firestore**, featuring modern UI design and seamless cross-device compatibility.  
 
